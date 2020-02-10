@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Srijan 20 Payment</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<section class="flex-container-column main-bg">
+		<img src="/images/srijan_logo_black.png" width="250px" />
+		<h2><%= title %></h2>
+		<h4>Order ID: <%= config.ORDER_ID %></h4>
+		<h3>Amount: &#8377;<%= config.TXN_AMOUNT %></h3>
+		<form id="form1" method="post" action="#">
+			<input type="hidden" name="ORDER_ID" value="<%= config.ORDER_ID %>" />
+			<input type="hidden" name="TXN_AMOUNT" value="<%= config.TXN_AMOUNT %>" />
+			<input value="Checkout" class="checkout-btn" type="submit" id ="user-submit" />
+		</form>
+	</section>
+</body>
+</html>

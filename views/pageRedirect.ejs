@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect</title>
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <section class="flex-container-column main-bg">
+		<h1>Please do not refresh this page...</h1>
+		<div class="loader">Loading...</div>
+		<form method="post" action="<%= url %>" name="f1">
+			<% for (let paramName in params) { %>
+				<input type="hidden" name="<%= paramName %>" value="<%= params[paramName] %>" />
+			<% } %>
+			<input type="hidden" name="CHECKSUMHASH" value="<%= checksum %>" />
+			</table>
+		</form>
+	</section>
+	<script type="text/javascript">
+		document.f1.submit();
+	</script>
+</body>
+</html>

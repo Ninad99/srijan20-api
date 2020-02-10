@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+#firebase-admin
+srijan20-admin.json
