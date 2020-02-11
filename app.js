@@ -10,7 +10,7 @@ admin.initializeApp({
 });
 
 const app = express();
-const baseURL = 'http://localhost:2000';
+const baseURL = 'https://us-central1-srijan20-temp.cloudfunctions.net/app';
 
 app.use(cors());
 app.use(bodyParser.json({ extended: false }));

@@ -103,5 +103,10 @@ dist
 # TernJS port file
 .tern-port
 
-#firebase-admin
+#firebase
 srijan20-admin.json
+functions/
+build/
+.firebase/
+.firebaserc
+firebase.json
