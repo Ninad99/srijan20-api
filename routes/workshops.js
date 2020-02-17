@@ -10,9 +10,10 @@ router.get('/txn', (req, res, next) => {
   console.log(req.query);
   res.render('txn.ejs', { config: {
       ORDER_ID: orderId,
-      TXN_AMOUNT: amount
+      TXN_AMOUNT: amount,
+      ADDITIONAL_INFO: 'If you wish to pay in cash, pay to - Anindya(Jadavpur Campus): 7908829979, Soham(Salt Lake Campus): 8900537039 before 20th February, 2020 to confirm your registration.'
     },
-    title: 'Srijan 20 workshop payment'
+    title: 'Workshop payment'
   });
 });
 
