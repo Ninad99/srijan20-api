@@ -12,6 +12,9 @@
 		<h2><%= title %></h2>
 		<h4>Order ID: <%= config.ORDER_ID %></h4>
 		<h3>Amount: &#8377;<%= config.TXN_AMOUNT %></h3>
+		<% if (config.ADDITIONAL_INFO) { %>
+			<p><%= config.ADDITIONAL_INFO %></p>
+		<% } %>
 		<form id="form1" method="post" action="#">
 			<input type="hidden" name="ORDER_ID" value="<%= config.ORDER_ID %>" />
 			<input type="hidden" name="TXN_AMOUNT" value="<%= config.TXN_AMOUNT %>" />
