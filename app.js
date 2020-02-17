@@ -19,6 +19,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', 'views');
 app.set('view engine', 'ejs');
 
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+  next();
+})
+
 
 app.get('/', (req, res, next) => {
   res.send('<html><head></head><body><h2>Server running!</h2></body></html>');
